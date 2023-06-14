@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Title/>
-      <Body2 />
+      {/* <Body2 /> */}
       <Properties />
     </>
   )
