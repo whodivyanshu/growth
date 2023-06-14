@@ -1,0 +1,103 @@
+.body1{
+    width: 100%;
+    background-image: url("https://aasthy.com/static/media/app-banner-background-desktop.5dd3c2c0.svg");
+    height: 300px;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    /* display: none; */
+}
+.body1left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+
+    font-size: 25px;
+}
+.body1left h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 2%;;
+}
+
+.body1left p{
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+}
+.mid{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.mid button{
+    width: 200px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+.right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.right img{
+    width: 50%;
+    height: 100%;
+}
+
+@media (max-width: 1294px){
+    .body1left h1{
+        font-size: 38px;
+    }
+    .body1left p{
+        font-size: 20px;
+    }
+    .mid button{
+        font-size: 14px;
+        width: 160px;
+    }
+    .right img{
+        width: 60%;
+        height: 90%;
+    }
+    
+}
+@media (max-width: 983px){
+    .body1left{
+        padding-left: 3%;
+    }
+    .body1left h1{
+        font-size: 28px;
+    }
+    .body1left p{
+        font-size: 16px;
+    }
+    .mid button{
+        font-size: 12px;
+        width: 140px;
+    }
+    .right img{
+        width: 80%;
+        height: 80%;
+    }
+    
+}
+

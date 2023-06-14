@@ -1,0 +1,77 @@
+.body2{
+    height: 600px;
+    background-image: url("https://aasthy.com/static/media/hero-eclipse-desktop.6784702e.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 60px;
+    flex-direction: row;
+
+}
+.left h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+.left p{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    font-weight: 800;
+    color: #4e0668;
+
+    margin-bottom: 20px;
+}
+.left button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4e0668;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1282px){
+    .left h1{
+        font-size: 2.5rem;
+    }
+    .right img{
+        width: 400px;
+    }
+    .left p{
+        font-size: 1.2rem;
+    }
+    .body2{
+        padding: 70px 40px;
+    }
+}
+
+@media (max-width: 900px){
+    .body2{
+        flex-direction: column;
+        
+        height: fit-content;
+    }
+    .left h1{
+        font-size: 1.9rem;
+    }
+    .right img{
+        width: 380px;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,30 @@
+.container{
+    padding: 40px 60px;
+    background-color: rgb(242, 242, 242);
+    height: 700px;
+}
+.heading{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgb(61, 61, 61);
+}
+.desc{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: rgb(61, 61, 61);
+}
+.property{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+.investcontainer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none; 
+  -ms-overflow-style: none;
+}

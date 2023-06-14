@@ -1,0 +1,126 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+@media (max-width: 882px) {
+    .navbar {
+        padding: 0px 20px;
+        /* background-color: #b293bd; */
+        height: 60px;
+    }
+
+    .navbarItems {
+        display: none;
+    }
+
+    .menuButton {
+        display: flex;
+        /* display: none; */
+        padding: 0px 10px;
+        align-items: center;
+        cursor: pointer;
+        /* background-color: aqua; */
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 0px 20px; /* Adjust the padding values as per your requirements */
+    }
+}
+.navbar_logo{
+    display: flex;
+    align-items: center;
+}
+.navbarItem{
+    margin: 10px;
+    color: rgb(61, 61, 61);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+.navbarItems{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    align-items: center;
+    /* background-color: none; */
+}
+.navbarItem button{
+    /* border: none;s */
+    border-radius: 7px;
+}
+.navbtn{
+    padding: 10px 30px;
+    background-color: #4e0668;
+    color: white;
+    border: none;
+}
+.navbtn1{
+    padding: 10px 10px;
+    border: 2px solid #4e0668;
+    background: none;
+}
+.drawer{
+    display: none;
+}
+@media (max-width: 800px) {
+    .close{
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px 20px;
+        /* background-color: #b293bd; */
+
+    }
+    .drawer{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        background-color: #d2c0d7;
+        height: 100%;
+        overflow-y: visible;
+        transition: transform 0.3s ease-in-out;
+    }
+    .drawerItems{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style-type: none;
+        text-align: center;
+        /* margin: 20px 10px; */
+
+    }
+    .drawerItem{
+        margin: 15px 10px;
+        color: white
+
+        
+    }
+    .drawerbtn{
+        padding: 10px 30px;
+        background-color: #4E0668;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .drawerbtn1{
+        padding: 10px 10px;
+        background-color: white;
+
+        color: #4e0668;
+        
+        border: 2px solid #4e0668;
+        border-radius: 5px;
+        /* background: none; */
+    }
+}
