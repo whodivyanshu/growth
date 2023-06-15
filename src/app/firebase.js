@@ -4,14 +4,13 @@ import {getAuth, GoogleAuthProvider} from 'firebase/auth';
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDIalD3hefDlWgEt6o42NOB48LwTDR2lr0",
-  authDomain: "growthinvestment-62836.firebaseapp.com",
-  projectId: "growthinvestment-62836",
-  storageBucket: "growthinvestment-62836.appspot.com",
-  messagingSenderId: "399945425456",
-  appId: "1:399945425456:web:6667df0388c7fed44683f5"
+  apiKey: "AIzaSyCci93oq6lG8DeHOo0fCoTiJ-MZyYyGkDI",
+  authDomain: "growthinvestment-ec70e.firebaseapp.com",
+  projectId: "growthinvestment-ec70e",
+  storageBucket: "growthinvestment-ec70e.appspot.com",
+  messagingSenderId: "291454685935",
+  appId: "1:291454685935:web:3cd3df6db5bd75abcfc11a"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth  = getAuth(app);

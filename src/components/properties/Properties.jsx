@@ -28,7 +28,7 @@ const Properties = () => {
     fetchProperties();
   },[]);
 
-  // console.log(properties);
+  console.log(properties);
 
 
 
