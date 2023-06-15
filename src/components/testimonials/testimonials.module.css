@@ -1,0 +1,49 @@
+.reviewTile{    display: block;
+    width: 300px;
+    border-radius: 20px;
+    background-color: white;
+    height: 450px;
+    margin-left: 50px;
+    border: grey 1px solid;
+}
+
+.photo{
+    display: block;
+    border-radius: 20px 20px 0px 0px;
+    height: 200px;
+    width: 298px;
+    overflow: hidden;
+    aspect-ratio: unset;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.reviewContainer{
+    display: flex;
+    margin: 20px;
+    margin-top: 40px;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+.testimonies{
+    padding: 15px;
+    font-size: 14px;
+    font-family: "Poppins";
+}
+.review{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #232527;
+    padding: 5px;
+    letter-spacing: 1.2px;
+}
+.heading{
+    font-family: poppins;
+    font-size: 40px;
+    margin: 80px 0px 0px 80px;
+}
+.name{
+    font-size: 18px;
+}
