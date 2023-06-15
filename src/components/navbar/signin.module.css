@@ -2,7 +2,7 @@
     position: absolute;
     width: 50%;
     height: 450px;
-    background-color: rgb(255, 247, 247);
+    background-color: blueviolet;
     left: 25%;
     right: 25%;
     top: 20%;
@@ -14,6 +14,9 @@
     width: 50%;
     height: 100%;
     /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .left h1{
@@ -30,7 +33,7 @@
 .right{
     width: 50%;
     height: 100%;
-    background-color: cadetblue;
+    /* background-color: cadetblue;  */
 }
 .signin img{
     position: absolute;
@@ -50,4 +53,42 @@
     border: none;
     border-radius: 10px;
     margin: 10px;
+}
+@media (max-width: 1415px){
+    .left h1{
+        font-size: 17px;
+    }
+    .right h3{
+        font-size: 19px;
+    }
+    .right p{
+        font-size: 14px;
+    }
+    .signin{
+        padding: 20px;
+        padding-top: 70px;
+    }
+
+}
+@media (max-width: 997px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .right h3{
+        font-size: 29px;
+    }
+    .right p{
+        font-size: 14px;
+    }
+    .signin{
+        padding: 20px;
+        padding-top: 70px;
+        width: 80%;
+        left: 10%;
+        right: 10%
+    }
+
 }
