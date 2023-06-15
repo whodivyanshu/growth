@@ -1,0 +1,53 @@
+.signin{
+    position: absolute;
+    width: 50%;
+    height: 450px;
+    background-color: rgb(255, 247, 247);
+    left: 25%;
+    right: 25%;
+    top: 20%;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow; */
+
+}
+.left h1{
+    font-size: 23px;
+    color: rgb(60, 60, 60)
+}
+.log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height: 50%;
+}
+.right{
+    width: 50%;
+    height: 100%;
+    background-color: cadetblue;
+}
+.signin img{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.right p{
+    font-size: 19px;
+}
+.right h3{
+    font-size: 23px;
+    line-height: 39px;
+}
+.right button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
