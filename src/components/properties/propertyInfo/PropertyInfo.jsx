@@ -76,7 +76,23 @@ const PropertyInfo = () => {
                 </div>
         </div>
         <div className={styles.builder} >
+            <div className={styles.build}>
+
             <h2> <Image width="20" height="20" src="https://img.icons8.com/ios/50/building.png" alt="building"/> Builders Profile</h2>
+            <ol>
+                <li>Over 10 years of experience in the industry.</li>
+                <li>2 million+ sq.ft. developed and in development.</li>
+                <li>Received CRISIL 5 star rating for its ultra-luxury architecture, construction guarantee, project legal qualities, and financial quality</li>
+                <li>www.hebronproperties.com</li>
+            </ol>
+            </div>
+            <div className={styles.benifit}>
+                    <h2> <Image width="20" height="20" src="https://img.icons8.com/ios/50/sparkling.png" alt="sparkling"/> Benefits of this location</h2>
+                    <ol>
+                        <li>Proximity to ITPL, Outer Ring Road and KR Puram hanging bridge.</li>
+                        <li>Proximity to Baiyapanahalli metro station.</li>
+                    </ol>
+            </div>
         </div>
 
 
