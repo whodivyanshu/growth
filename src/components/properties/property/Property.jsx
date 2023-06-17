@@ -1,8 +1,12 @@
-import React from 'react'
+"use client"
+import React, { useContext } from 'react'
 import styles from "./property.module.css";
 import Image from 'next/image';
 
+
+
 const Property = (props) => {
+
   return (
    <div className={styles.container} >
     <div className={styles.image}>

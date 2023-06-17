@@ -1,18 +1,45 @@
 "use client";
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import styles from './navbar.module.css';
 import Logo from "public/logo.png";
 import sign from "./signin.module.css";
 import { auth, provider } from "@/app/firebase";
-import { signInWithPopup } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import Link from 'next/link';
+import signinContext from '@/context/signin/signinContext';
+import { signInWithPhoneNumber } from 'firebase/auth';
+
+
 
 const Navbar = () => {
+
+    const log = useContext(signinContext);
     const [showMenu, setShowMenu] = useState(false);
     const [showDrawer, setShowDrawer] = useState(false);
     const [value, setValue] = useState("");
     const [signin, setsignin] = useState(false);
+    const googleProvider = new GoogleAuthProvider();
+    const [login, setlogin] = useState(false);
+    // log.login = true;
+    // console.log(log.login);
+
+    useEffect(() => {
+        // Check if user is already signed in
+        const user = localStorage.getItem('user');
+        if (user) {
+          // Set the initial sign-in state
+          setlogin(true);
+          log.login = true;
+        }
+        else{
+            log.login = false;
+        }
+
+    
+        // ... Remaining code ...
+      }, [log]);
+
     
     useEffect(() => {
         const handleResize = () => {
@@ -33,16 +60,94 @@ const Navbar = () => {
         };
     },[]);
 
+
+    const handleSignOut = () => {
+        // Clear user information from local storage and sign out
+        localStorage.removeItem('user');
+        auth.signOut().then(() => {
+          setsignin(false);
+          log.login = false;
+          window.location.reload();
+        });
+      };
+
+
+      const handlePhoneSignIn = () => {
+        // Prompt the user to enter their phone number
+        const phoneNumber = prompt("Please enter your phone number");
+      
+        // Create a new Firebase PhoneAuthProvider instance
+        const phoneProvider = new firebase.auth.PhoneAuthProvider();
+      
+        // Send the verification code to the user's phone number
+        signInWithPhoneNumber(auth, phoneNumber, phoneProvider)
+          .then((confirmationResult) => {
+            // Save the verification ID for later use
+            const verificationId = confirmationResult.verificationId;
+      
+            // Prompt the user to enter the verification code
+            const verificationCode = prompt("Please enter the verification code");
+      
+            // Verify the entered code with the verification ID
+            const credential = firebase.auth.PhoneAuthProvider.credential(
+              verificationId,
+              verificationCode
+            );
+      
+            // Sign in the user with the phone credential
+            auth
+              .signInWithCredential(credential)
+              .then((result) => {
+                // User signed in successfully
+                const user = result.user;
+                console.log("User signed in with phone:", user);
+                localStorage.setItem("user", JSON.stringify(user));
+                window.location.reload();
+                // Redirect or handle the successful sign-in as needed
+              })
+              .catch((error) => {
+                // Handle sign-in errors
+                console.error("Error signing in with phone:", error);
+                // Handle the sign-in error
+              });
+          })
+          .catch((error) => {
+            // Handle sending verification code errors
+            console.error("Error sending verification code:", error);
+            // Handle the error
+          });
+      };
+      
+      
+    const handlegooglesignin = () => {
+        // Sign in with Google
+        signInWithPopup(auth, googleProvider)
+          .then((result) => {
+            // User signed in successfully
+            const user = result.user;
+            console.log('User signed in:', user);
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.reload();
+            // Redirect or handle the successful sign-in as needed
+          })
+          .catch((error) => {
+            // Handle sign-in errors
+            console.error('Error signing in with Google:', error);
+            // Handle the sign-in error
+          });
+      };
+      
+
     const toggleMenu = () => {
         // setShowMenu(!showMenu);
         setShowDrawer(!showDrawer);
     };
 
-    const handleSignIn  = () => {
+    const handleSignInPopup  = () => {
         setsignin(true);
       }
 
-    const handleclose = () => {
+    const handleclosePopup = () => {
         setsignin(false);
     }
 
@@ -63,10 +168,11 @@ const Navbar = () => {
                     <Link href="/">
                     <li className={styles.navbarItem}>Home</li>
                         </Link>
-                        <Link href="/properties">
-                            
-                    <li className={styles.navbarItem}>Investments</li>
-                            </Link>
+
+                     <Link href="/properties" >
+                    <li className={styles.navbarItem} >Investments</li>
+                        </Link>       
+
                     <li className={styles.navbarItem}>FAQ</li>
                     <li className={styles.navbarItem}>About Us</li>
                     <li className={styles.navbarItem}>
@@ -76,7 +182,11 @@ const Navbar = () => {
                         <Image src="https://img.icons8.com/ios/90/000000/headset--v1.png" width={30} height={30} alt='customer care' />
                     </li>
                     <li className={styles.navbarItem}>
-                        <button className={styles.navbtn} onClick={handleSignIn}>Sign In</button>
+                        {login ? ( 
+                            <button className={styles.navbtn} onClick={handleSignOut} >logout</button> 
+                        ) : (
+                            <button className={styles.navbtn} onClick={handleSignInPopup}>Sign In</button>
+                           ) }
                     </li>
                 </ul>
             )}
@@ -99,23 +209,24 @@ const Navbar = () => {
                             <Image src="https://img.icons8.com/ios/90/4E0668/headset--v1.png" width={30} height={30} alt='customer care' />
                         </li>
                         <li className={styles.drawerItem}>
-                            <button className={styles.drawerbtn} onClick={handleSignIn}>Sign In</button>
+                            {login ? (<button className={styles.drawerbtn} onClick={handleSignOut} >Sign Out</button>) : (
+
+                                <button className={styles.drawerbtn} onClick={handleSignInPopup}>Sign In</button>
+                            )}
                         </li>
                     </ul>
                 </div>
             )}
             {signin && (
                     <div className={sign.signin} >
-                    <p><Image onClick={handleclose} width="40" height="40" src="https://img.icons8.com/ios-filled/50/multiply.png" alt="multiply"/></p>
-                    <div className={sign.left}>
-                            <h1>You are seconds away from <br /> diversifying your portfolio!</h1>
-                    </div>
+                    <p><Image onClick={handleclosePopup} width="40" height="40" src="https://img.icons8.com/ios-filled/50/multiply.png" alt="multiply"/></p>
+
                     <div className={sign.right} >
                         <p>Lets begin your high returns journey</p>
                         <h3>Sign in with just a click!</h3>
                         <div className={sign.log}>
-                            <button className={sign.google} onClick={() => signInWithPopup(auth, provider)}>Sign in with Google</button>
-                            <button className={sign.number}>Sign in Phone Number</button>
+                            <button className={sign.google} onClick={handlegooglesignin}>Sign in with Google</button>
+                            <button className={sign.number} onDoubleClick={handlePhoneSignIn} >Sign in Phone Number</button>
                         </div>
                     </div>
             </div>

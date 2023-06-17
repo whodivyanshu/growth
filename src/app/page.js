@@ -1,14 +1,19 @@
-
 import Image from 'next/image'
 import styles from "./page.module.css"
 import Title from '@/components/body1/Title'
+
 
 import Properties from '@/components/properties/Properties'
 import Body2 from '@/components/body2/Body2'
 import Testimonials from '@/components/testimonials/Testimonials'
 import PropertyState from '@/context/PropertyState'
 
+
+
 export default function Home() {
+
+
+
 
   return (
     <>
@@ -16,7 +21,7 @@ export default function Home() {
 
       <Title/>
       <Body2 />
-      <Properties />
+      <Properties  />
       <Testimonials/>
       </PropertyState>
     </>
