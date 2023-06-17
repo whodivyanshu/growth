@@ -8,6 +8,8 @@ import { collection, getDocs } from 'firebase/firestore';
 import Link from 'next/link';
 
 
+
+
 const Properties = () => {
   const collectionRef = collection(database, "properties");
   const [properties, setProperties] = useState([]);
@@ -28,7 +30,7 @@ const Properties = () => {
     fetchProperties();
   },[]);
 
-  // console.log(properties);
+  console.log(properties);
 
 
 

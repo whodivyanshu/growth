@@ -6,6 +6,12 @@
     font-size: 14px;
     box-shadow: grey 0px 0px 10px;
 }
+.navbar button{
+    cursor: pointer;
+}
+.navbar li{
+    cursor: pointer;
+}
 
 @media (max-width: 882px) {
     .navbar {
@@ -45,6 +51,7 @@
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
 }
+
 .navbarItems{
     list-style-type: none;
     display: flex;

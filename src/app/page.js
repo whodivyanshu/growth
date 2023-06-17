@@ -1,29 +1,20 @@
 
-// import Image from 'next/image'
-// <<<<<<< master
-// import styles from './page.module.css'
-// import Title from "@/components/body1/Title"
-// import Testimonials from '@/components/testimonials/Testimonials'
-
-// export default function Home() {
-//   return(
-//     <div>
-//     <Title/>
-//       <Testimonials />
-//     </div>
-  
-// =======
+import Image from 'next/image'
 import styles from "./page.module.css"
 import Title from '@/components/body1/Title'
-    import Testimonials from "@/components/testimonials/Testimonials"
+
+import Properties from '@/components/properties/Properties'
+import Body2 from '@/components/body2/Body2'
+import Testimonials from '@/components/testimonials/Testimonials'
 
 export default function Home() {
 
   return (
     <>
       <Title/>
-    <Testimonials />
+      <Body2 />
+      <Properties />
+      <Testimonials/>
     </>
-// >>>>>>> master
   )
 }
