@@ -67,8 +67,12 @@ const Navbar = () => {
                             
                     <li className={styles.navbarItem}>Investments</li>
                             </Link>
+                            <Link href="/faq">
                     <li className={styles.navbarItem}>FAQ</li>
+                            </Link>
+                            <Link href="/about">
                     <li className={styles.navbarItem}>About Us</li>
+                            </Link>
                     <li className={styles.navbarItem}>
                         <button className={styles.navbtn1}>Refer and Earn</button>
                     </li>
