@@ -1,11 +1,12 @@
 "use client"
+import PropertyInfo from '@/components/properties/propertyInfo/PropertyInfo';
 import React from 'react';
 
 const Property = () => {
 
   return (
     <div>
-      <h1>Property Page</h1>
+      <PropertyInfo />
     </div>
   );
 };
