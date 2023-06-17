@@ -36,7 +36,7 @@ const Properties = () => {
 
 
   return (
-    <div className={styles.container}>
+    <div id={styles.properties} className={styles.container}>
         <h1 className={styles.heading}>Fractional Investment Properties</h1>
         <p className={styles.desc}>These are specially curated Aasthy-exclusive fractional investment opportunities.</p> 
         <div className={styles.investcontainer} >

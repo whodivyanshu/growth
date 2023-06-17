@@ -24,7 +24,7 @@ const About=()=>{
                     <h2>Discover fractional investments in real estate curated by our experts to give you the best returns!</h2>
                     <br />
                     <br />
-                    <Link type="button" id={styles.exploreAss} href="/faq">Explore Assets!</Link>
+                    <Link type="button" id={styles.exploreAss} href="/#properties">Explore Assets!</Link>
                 </div>
                 <div><br /><br /><Image className={styles.image} width={380} height={240} src={BottomRight}></Image></div>
             </div>
