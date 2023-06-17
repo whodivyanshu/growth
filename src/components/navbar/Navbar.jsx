@@ -172,9 +172,12 @@ const Navbar = () => {
                      <Link href="/properties" >
                     <li className={styles.navbarItem} >Investments</li>
                         </Link>       
-
+                    <Link href="/faq">
                     <li className={styles.navbarItem}>FAQ</li>
+                        </Link>
+                        <Link href="/about">
                     <li className={styles.navbarItem}>About Us</li>
+                            </Link>
                     <li className={styles.navbarItem}>
                         <button className={styles.navbtn1}>Refer and Earn</button>
                     </li>
@@ -199,9 +202,15 @@ const Navbar = () => {
                         <Link href="/">
                         <li className={styles.drawerItem}>Home</li>
                             </Link>
+                            <Link href="/properties" >
                         <li className={styles.drawerItem}>Investments</li>
+                                </Link>
+                                <Link href="/faq">
                         <li className={styles.drawerItem}>FAQ</li>
+                                    </Link>
+                                    <Link href="/about">
                         <li className={styles.drawerItem}>About Us</li>
+                                        </Link>
                         <li className={styles.drawerItem}>
                             <button className={styles.drawerbtn1}>Refer and Earn</button>
                         </li>
