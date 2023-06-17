@@ -16,7 +16,7 @@ export default function Home() {
 
       <Title/>
       <Body2 />
-      <Properties />
+      <Properties id={styles.properties} />
       <Testimonials/>
       </PropertyState>
     </>
