@@ -1,8 +1,12 @@
-import React from 'react'
+"use client"
+import React, {useContext} from 'react'
 import styles from './body2.module.css'
 import Image from 'next/image'
 
+
 const Body2 = () => {
+
+  
   return (
     <div className={styles.body2}>
         <div className={styles.left} >

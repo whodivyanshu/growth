@@ -95,7 +95,7 @@
 
 .propdetails{
     margin-top: 30px;
-    width: 50%;
+    /* width: 50%; */
 
 }
 .propdetails h2{
@@ -148,4 +148,19 @@
     font-size: 21px;
     font-weight: 800;
     margin-bottom: 0.6rem;
+}
+
+@media (max-width: 900px){
+    .property{
+        padding: 62px 50px;
+    }
+    .back{
+        top: 10%;
+        left: 3.3%;
+    }
+    .images img{
+        width: 300px;
+    }
+
+      
 }

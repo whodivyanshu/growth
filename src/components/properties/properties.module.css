@@ -23,7 +23,7 @@
 }
 .investcontainer{
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
     white-space: nowrap;
     scrollbar-width: none; 
   -ms-overflow-style: none;

@@ -5,9 +5,12 @@ import Image from 'next/image';
 import Logo from "public/logo.png"
 
 const PropertyInfo = () => {
+  const handleback = ()=>{
+    window.history.back();
+  }
   return (
     <div className={styles.property}>
-        <span className={styles.back} ><Image width="24" height="24" src="https://img.icons8.com/material-two-tone/24/left.png" alt="left"/></span>
+        <span className={styles.back} > <   Image width="24" onClick={handleback}  height="24" src="https://img.icons8.com/material-two-tone/24/left.png" alt="left"/></span>
         <div className={styles.location}>
             
         <h2>Ramamurthy Nagar, Bangalore- Hebron Avenue</h2>
