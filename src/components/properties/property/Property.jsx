@@ -2,12 +2,14 @@
 import React, { useContext } from 'react'
 import styles from "./property.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
 const Property = (props) => {
 
   return (
+    <Link href={{ pathname: "/property" }} key={props.id}>
    <div className={styles.container} >
     <div className={styles.image}>
       <p>{props.location}<br /> {props.area}</p>
@@ -30,11 +32,13 @@ const Property = (props) => {
         <div className={styles.investright}>
         <span style={{fontFamily: "fantasy"}} >Returns (CAGR)
  <br /> <span style={{fontWeight: "bold"}} >{props.returns}%</span></span>
+    
 
         </div>
       </div>
     </div>
    </div>
+   </Link>
   )
 }
 

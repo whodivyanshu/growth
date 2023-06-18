@@ -36,7 +36,7 @@ const Properties = () => {
       <div className={styles.investcontainer}>
         <div className={styles.property}>
           {properties.map((property) => (
-            <Link href={{ pathname: "/property" }} key={property.id}>
+            // <Link href={{ pathname: "/property" }} key={property.id}>
               <Property
                 key={property.id}
                 id={property.id}
@@ -48,7 +48,7 @@ const Properties = () => {
                 investors={property.investors}
                 returns={property.returns}
               />
-            </Link>
+            // </Link>
           ))}
         </div>
       </div>
