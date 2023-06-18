@@ -13,26 +13,6 @@
     cursor: pointer;
 }
 
-@media (max-width: 882px) {
-    .navbar {
-        padding: 0px 20px;
-        /* background-color: #b293bd; */
-        height: 60px;
-    }
-
-    .navbarItems {
-        display: none;
-    }
-
-    .menuButton {
-        display: flex;
-        /* display: none; */
-        padding: 0px 10px;
-        align-items: center;
-        cursor: pointer;
-        /* background-color: aqua; */
-    }
-}
 
 
 @media (max-width: 1000px) {
@@ -78,6 +58,60 @@
 .drawer{
     display: none;
 }
+
+
+#supportdiv{
+    position: fixed;
+    top: 30%;
+    width: 40%;
+    left: 30%;
+    padding: 30px;
+    background-color: #4e0668;
+}
+
+.support{
+    color: white;
+    border-radius: 10px;
+}
+
+.flexDiv{
+    display: flex;
+}
+.flexDiv button{
+    margin-left: auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(61, 61, 61,0);
+}
+@media (max-width: 882px) {
+    .navbar {
+        padding: 0px 20px;
+        /* background-color: #b293bd; */
+        height: 60px;
+    }
+
+    .navbarItems {
+        display: none;
+    }
+
+    .menuButton {
+        display: flex;
+        /* display: none; */
+        padding: 0px 10px;
+        align-items: center;
+        cursor: pointer;
+        /* background-color: aqua; */
+    }
+    #supportdiv{
+        left: 10%;
+        color: black;
+        width: 80%;
+        }
+}
+
+
 @media (max-width: 800px) {
     .close{
         height: 50px;
@@ -130,5 +164,12 @@
         border: 2px solid #4e0668;
         border-radius: 5px;
         /* background: none; */
+        }
+    
+}
+
+@media (max-width:470px){
+    #supportIm{
+        display: none;
     }
 }
