@@ -4,7 +4,6 @@ import styles from "./properties.module.css";
 import Property from './property/Property';
 import { database } from "@/app/firebase";
 import { collection, getDocs } from 'firebase/firestore';
-import Link from 'next/link';
 
 const Properties = () => {
   const collectionRef = collection(database, "properties");
