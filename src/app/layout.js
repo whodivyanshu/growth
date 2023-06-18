@@ -1,8 +1,9 @@
-import Navbar from '@/components/navbar/Navbar'
+// import Navbar from '@/components/navbar/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
 import SigninState from '@/context/signin/SigninState'
+import Nav from '@/components/navbar/Nav'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,8 +21,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <SigninState>
 
-
-        <Navbar  />
+        <Nav/>
+        {/* <Navbar  /> */}
         {children}
         <Footer />
         </SigninState>

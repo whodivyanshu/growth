@@ -1,4 +1,4 @@
-import Phone from '@/components/Phone'
+import Phone from '@/components/navbar/Phone'
 import React from 'react'
 
 const Page = () => {

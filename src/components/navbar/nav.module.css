@@ -1,0 +1,28 @@
+.navbar_logo{
+    /* height: 50px;
+    width: 50px; */
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.navbar{
+    background-color: #fff;
+    padding: 10px 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 999;
+}
+.navbarItems{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    align-items: center;
+}

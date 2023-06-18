@@ -1,30 +1,49 @@
-.container{
-    padding: 40px 60px;
+.container {
+    padding: 40px;
     background-color: rgb(242, 242, 242);
     height: 700px;
-}
-.heading{
+  }
+  
+  .heading {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
     color: rgb(61, 61, 61);
-}
-.desc{
+  }
+  
+  .desc {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px;
     color: rgb(61, 61, 61);
-}
-.property{
+  }
+  
+  .property {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     flex-wrap: nowrap;
-}
-.investcontainer{
+  }
+  
+  .investcontainer {
     overflow-x: auto;
     overflow-y: auto;
     white-space: nowrap;
-    scrollbar-width: none; 
-  -ms-overflow-style: none;
-}
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .heading {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  
+
+  }
+  

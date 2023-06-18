@@ -8,7 +8,7 @@ import { auth, provider } from "@/app/firebase";
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import Link from 'next/link';
 import signinContext from '@/context/signin/signinContext';
-import Phone from '../Phone';
+import Phone from './Phone';
 
 
 
@@ -21,6 +21,7 @@ const Navbar = () => {
     const googleProvider = new GoogleAuthProvider();
     const [login, setlogin] = useState(false);
     const [phone, setphone] = useState(false);
+    const [support, setSupport]=useState(false);
     // log.login = true;
     // console.log(log.login);
 
@@ -199,6 +200,7 @@ const Navbar = () => {
             </div>
             )}
             {phone && (<Phone/>)}
+            
 
         </div>
     );
