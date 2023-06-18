@@ -6,7 +6,7 @@
     color: #2f363f;
 }
 #top div{
-    padding: 70px 200px 0px;
+    padding: 70px 10% 0px;
 }
 #top h1{
     font-weight: 600;
@@ -17,7 +17,7 @@
     background-color: #f5f5f5;   
 }
 #bottom div{
-    padding: 70px 200px 100px;
+    padding: 70px 8% 100px;
 }
 #bottom h2{
     font-weight: 600;
@@ -36,4 +36,38 @@
 
 .image{
     margin-top: -50px;
+}
+
+@media (max-width:1000px) {
+    
+#top div{
+    padding: 70px 5% 0px;
+}
+#bottom div{
+    padding: 70px 2% 100px;
+}
+}
+@media (max-width:600px) {
+    
+    #top div .image{
+        width: 270px;
+        height: 270px;
+    }
+
+    #top div{
+        padding: 70px 5% 0px;
+    }
+    #bottom div{
+        padding: 50px 5% 10px;
+        margin: auto;
+    }
+    #bottom{
+        padding: 20px 0px 100px;
+    }
+    .flexDiv{
+        display: block;
+    }
+    .flexDiv div{
+        width: 100%;
+    }
 }
