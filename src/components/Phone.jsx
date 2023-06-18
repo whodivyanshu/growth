@@ -70,7 +70,7 @@ const Phone = () => {
   }
 
   return (
-    <section style={{ background: "#10B981" }} className="flex items-center justify-center h-screen">
+    <section  style={{ background: "#10B981" }} className={styles.phone}>
       <div>
         <Toaster toastOptions={{ duration: 4000 }} />
         <div id="recaptcha-container"></div>

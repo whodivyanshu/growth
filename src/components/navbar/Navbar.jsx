@@ -8,9 +8,7 @@ import { auth, provider } from "@/app/firebase";
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import Link from 'next/link';
 import signinContext from '@/context/signin/signinContext';
-import { signInWithPhoneNumber } from 'firebase/auth';
 import Phone from '../Phone';
-import { set } from 'mongoose';
 
 
 
@@ -200,7 +198,7 @@ const Navbar = () => {
                     </div>
             </div>
             )}
-            {/* {phone && (<Phone/>)} */}
+            {phone && (<Phone/>)}
 
         </div>
     );
