@@ -98,3 +98,7 @@
     background-color: white;
     border-radius: 10px;
 }
+.phone input{
+    width: 200px;
+    text-align: center;
+}

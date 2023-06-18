@@ -9,20 +9,20 @@ import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import Link from 'next/link';
 import signinContext from '@/context/signin/signinContext';
 import { signInWithPhoneNumber } from 'firebase/auth';
+import Phone from '../Phone';
+import { set } from 'mongoose';
 
 
 
 const Navbar = () => {
 
     const log = useContext(signinContext);
-    const [phone, setPhone] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const [showDrawer, setShowDrawer] = useState(false);
-    const [value, setValue] = useState("");
     const [signin, setsignin] = useState(false);
-    const [number, setNumber] = useState("");
     const googleProvider = new GoogleAuthProvider();
     const [login, setlogin] = useState(false);
+    const [phone, setphone] = useState(false);
     // log.login = true;
     // console.log(log.login);
 
@@ -73,52 +73,10 @@ const Navbar = () => {
         });
       };
 
-
       const handlePhoneSignIn = () => {
-        // Prompt the user to enter their phone number
-        const phoneNumber = prompt("Please enter your phone number");
-      
-        // Create a new Firebase PhoneAuthProvider instance
-        const phoneProvider = new firebase.auth.PhoneAuthProvider();
-      
-        // Send the verification code to the user's phone number
-        signInWithPhoneNumber(auth, phoneNumber, phoneProvider)
-          .then((confirmationResult) => {
-            // Save the verification ID for later use
-            const verificationId = confirmationResult.verificationId;
-      
-            // Prompt the user to enter the verification code
-            const verificationCode = prompt("Please enter the verification code");
-      
-            // Verify the entered code with the verification ID
-            const credential = firebase.auth.PhoneAuthProvider.credential(
-              verificationId,
-              verificationCode
-            );
-      
-            // Sign in the user with the phone credential
-            auth
-              .signInWithCredential(credential)
-              .then((result) => {
-                // User signed in successfully
-                const user = result.user;
-                console.log("User signed in with phone:", user);
-                localStorage.setItem("user", JSON.stringify(user));
-                window.location.reload();
-                // Redirect or handle the successful sign-in as needed
-              })
-              .catch((error) => {
-                // Handle sign-in errors
-                console.error("Error signing in with phone:", error);
-                // Handle the sign-in error
-              });
-          })
-          .catch((error) => {
-            // Handle sending verification code errors
-            console.error("Error sending verification code:", error);
-            // Handle the error
-          });
-      };
+        handleclosePopup();
+        setphone(true);
+      }
       
       
     const handlegooglesignin = () => {
@@ -237,16 +195,13 @@ const Navbar = () => {
                         <h3>Sign in with just a click!</h3>
                         <div className={sign.log}>
                             <button className={sign.google} onClick={handlegooglesignin}>Sign in with Google</button>
-                            <button className={sign.number} onDoubleClick={handlePhoneSignIn} >Sign in Phone Number</button>
+                            <button className={sign.number} onClick={handlePhoneSignIn} >Sign in Phone Number</button>
                         </div>
                     </div>
             </div>
             )}
-            <div className={sign.phone} >
-                <h2>Sign In With Phone Number</h2>
-                <input type="number" value={number} onChange={(e)=>{e.target.value}}  />
-                <button type='submit' > Send OTP </button>
-            </div>
+            {/* {phone && (<Phone/>)} */}
+
         </div>
     );
 };
