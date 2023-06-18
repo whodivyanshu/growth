@@ -37,7 +37,30 @@ const Property = (props) => {
         </div>
       </Link>
     ) : (
-        alert("Please Sign In to view the properties")
+      <div className={styles.container} onClick={()=>alert("sign in to view the properties")}>
+      <div className={styles.image}>
+        <p>{props.location}<br /> {props.area}</p>
+      </div>
+      <p className={styles.unit}>1 Unit</p>
+      <hr className={styles.hr} />
+      <div className={styles.main}>
+        <h3>Min. investment: ₹{props.investment}</h3>
+        <p>Funded: ₹{props.funded} (100%)</p>
+        <hr className={styles.hrr} />
+        <h5>GENERATING RETURNS</h5>
+        {/* <h5>{props.id}</h5> */}
+        <hr className={styles.hr} />
+        <div className={styles.iteminvest}>
+          <div className={styles.investleft}>
+            <span style={{ fontFamily: "fantasy" }}>Investors <br />  <span style={{ fontWeight: "bold" }}>{props.investors}</span></span>
+          </div>
+          <div className={styles.investright}>
+            <span style={{ fontFamily: "fantasy" }}>Returns (CAGR)
+              <br /> <span style={{ fontWeight: "bold" }}>{props.returns}%</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
       )
   );
 }
