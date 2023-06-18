@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import styles from './navbar.module.css';
 import Logo from "public/logo.png";
+import Support from'public/support.png';
 import sign from "./signin.module.css";
 import { auth, provider } from "@/app/firebase";
 import { signInWithPopup } from 'firebase/auth';
@@ -13,6 +14,7 @@ const Navbar = () => {
     const [showDrawer, setShowDrawer] = useState(false);
     const [value, setValue] = useState("");
     const [signin, setsignin] = useState(false);
+    const [support, setSupport]=useState(false);
     
     useEffect(() => {
         const handleResize = () => {
@@ -28,6 +30,20 @@ const Navbar = () => {
         
         window.addEventListener("resize", handleResize);
         
+
+        if(support){
+            window.addEventListener("click",handleClickSupport);
+        }
+       
+
+        const handleClickSupport=(event)=>{
+            var className=event.target.className;
+            if(true){
+                toggleSupport();
+            }
+            window.removeEventListener("click",handleClickSupport);
+        }
+    
         return () => {
             window.removeEventListener("resize", handleResize);
         };
@@ -46,6 +62,9 @@ const Navbar = () => {
         setsignin(false);
     }
 
+    const toggleSupport=()=>{
+        setSupport(!support);
+    }
 
     return (
         <div className={styles.navbar}>
@@ -67,16 +86,16 @@ const Navbar = () => {
                             
                     <li className={styles.navbarItem}>Investments</li>
                             </Link>
-                            <Link href="/faq">
+                        <Link href="/faq">
                     <li className={styles.navbarItem}>FAQ</li>
-                            </Link>
-                            <Link href="/about">
+                        </Link>
+                        <Link href="/about">
                     <li className={styles.navbarItem}>About Us</li>
-                            </Link>
+                        </Link>
                     <li className={styles.navbarItem}>
                         <button className={styles.navbtn1}>Refer and Earn</button>
                     </li>
-                    <li className={styles.navbarItem}>
+                    <li className={styles.navbarItem} onClick={toggleSupport}>
                         <Image src="https://img.icons8.com/ios/90/000000/headset--v1.png" width={30} height={30} alt='customer care' />
                     </li>
                     <li className={styles.navbarItem}>
@@ -99,7 +118,7 @@ const Navbar = () => {
                         <li className={styles.drawerItem}>
                             <button className={styles.drawerbtn1}>Refer and Earn</button>
                         </li>
-                        <li className={styles.drawerItem}>
+                        <li className={`${styles.drawerItem} ${styles.support}`}>
                             <Image src="https://img.icons8.com/ios/90/4E0668/headset--v1.png" width={30} height={30} alt='customer care' />
                         </li>
                         <li className={styles.drawerItem}>
@@ -109,7 +128,7 @@ const Navbar = () => {
                 </div>
             )}
             {signin && (
-                    <div className={sign.signin} >
+                    <div id="myModal"className={sign.signin} >
                     <p><Image onClick={handleclose} width="40" height="40" src="https://img.icons8.com/ios-filled/50/multiply.png" alt="multiply"/></p>
                     <div className={sign.left}>
                             <h1>You are seconds away from <br /> diversifying your portfolio!</h1>
@@ -124,6 +143,24 @@ const Navbar = () => {
                     </div>
             </div>
             )}
+            {support?<div id={styles.supportdiv} className={styles.support}>
+                <div className={styles.flexDiv}><h1 className={styles.support}>Support</h1><button onClick={toggleSupport}>X</button></div>
+                <div className={styles.flexDiv}><section><p className={styles.support}>Please reach out to us with your concerns on any of these platforms</p>
+                <br />
+                <p className={styles.support}>Email :</p>
+                <p className={styles.support}>support@aasthy.com</p>
+                <br />
+                <p className={styles.support}>Call :</p>
+                <p className={styles.support}>+918045688004</p>
+                <br />
+                <p className={styles.support}>Whatsapp :</p>
+                <p className={styles.support}>+918045688004</p></section>
+                <Image id={styles.supportIm} width={200} heigth={200}src={Support}></Image>
+                </div>
+                
+            </div>:
+            <></>}
+            
         </div>
     );
 };
