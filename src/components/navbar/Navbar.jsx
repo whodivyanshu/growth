@@ -15,10 +15,12 @@ import { signInWithPhoneNumber } from 'firebase/auth';
 const Navbar = () => {
 
     const log = useContext(signinContext);
+    const [phone, setPhone] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const [showDrawer, setShowDrawer] = useState(false);
     const [value, setValue] = useState("");
     const [signin, setsignin] = useState(false);
+    const [number, setNumber] = useState("");
     const googleProvider = new GoogleAuthProvider();
     const [login, setlogin] = useState(false);
     // log.login = true;
@@ -240,6 +242,11 @@ const Navbar = () => {
                     </div>
             </div>
             )}
+            <div className={sign.phone} >
+                <h2>Sign In With Phone Number</h2>
+                <input type="number" value={number} onChange={(e)=>{e.target.value}}  />
+                <button type='submit' > Send OTP </button>
+            </div>
         </div>
     );
 };
