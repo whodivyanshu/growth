@@ -75,3 +75,37 @@
         text-align: center;
     }
 }
+#marketPoints{
+    display: flex;
+    margin: 5%;
+    border-radius: 10px;
+    padding: 20px;
+    color: #4e0668;
+    box-shadow: grey 0px 0px 10px;
+}
+
+#marketPoints div div{
+    width: 50%;
+}
+.marketsubDiv{
+    display: flex;
+    width: 50%;
+}
+#marketPoints h1{
+    font-size: 30px;
+    text-align: center;
+}
+#marketPoints p{
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width:800px) {
+    #marketPoints{
+        display: block;
+    }
+    .marketsubDiv{
+        width: 100%;
+    }
+}

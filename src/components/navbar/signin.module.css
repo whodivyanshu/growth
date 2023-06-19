@@ -27,7 +27,6 @@
         border-radius: 10px;
     
         right: 10%;
-        background-color: aqua;
     }
     .sign{
         width: 100%;
@@ -41,12 +40,13 @@
     position: absolute;
     top: 20%;
     left: 35%;
+    background-color: #4e0668;
+    color: white;
     /* display: flex; */
     flex-direction: column;
     border-radius: 10px;
 
     right: 35%;
-    background-color: aqua;
 }
 .sign{
     width: 100%;
@@ -80,4 +80,7 @@
 .right h3{
     font-size: 30px;
     font-weight: 600;
+}
+#cross{
+    filter:invert(1)
 }

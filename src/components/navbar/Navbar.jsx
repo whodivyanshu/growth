@@ -187,7 +187,7 @@ const Navbar = () => {
             )}
             {signin && (
                     <div className={sign.signin} >
-                    <p><Image onClick={handleclosePopup} width="40" height="40" src="https://img.icons8.com/ios-filled/50/multiply.png" alt="multiply"/></p>
+                    <p><Image onClick={handleclosePopup} id={sign.cross} width="40" height="40" src="https://img.icons8.com/ios-filled/50/multiply.png" alt="multiply"/></p>
 
                     <div className={sign.right} >
                         <p>Lets begin your high returns journey</p>
