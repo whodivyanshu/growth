@@ -6,7 +6,8 @@
   left: 35%;
   border-radius: 10px;
   right: 35%;
-  background-color: aqua;
+  background-color: #4e0668;
+  color: white;
 }
 
 .signin img {
@@ -14,6 +15,7 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+  filter:invert(1);
 }
 
 .sign .right button {
@@ -21,7 +23,14 @@
   border: none;
   border-radius: 10px;
   margin: 10px;
+  background-color: white;
+  color:#4e0668;
+  font-size: 15px;
+}
+.sign .right button:hover{
   background-color: blueviolet;
+  color:white;
+  border: 2px white solid;
 }
 
 @media (max-width: 1200px) {
