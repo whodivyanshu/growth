@@ -23,6 +23,8 @@ starting from only ₹5,000</p>
         <div className={styles.right} >
             <Image src="https://aasthy.com/static/media/hero-location-image.72e4d501.svg"  width={600} alt='photo' height={600} />
         </div>
+
+
     </div>
   )
 }
