@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from "./property.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Property = () => {
   return (
+    <Link href="/property">
    <div className={styles.container}>
     <div className={styles.image}>
       <p>Herbon Avenue <br /> Bangalore</p>
@@ -30,6 +32,7 @@ const Property = () => {
       </div>
     </div>
    </div>
+   </Link>
   )
 }
 

@@ -7,6 +7,7 @@ import styles from './navbar.module.css';
 import Drawer from './Drawer';
 import Sign from './Sign';
 import signinContext from '@/context/signin/signinContext';
+import Support from "public/support.png"
 import { auth } from '@/app/firebase';
 
 
@@ -16,6 +17,7 @@ const Nav = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [showDrawer, setShowDrawer] = useState(false);
     const [signin, setSignin] = useState(false)
+    const [support, setSupport]=useState(false);
 
     const toggleMenu = () => {
         setShowDrawer(!showDrawer);
@@ -77,6 +79,9 @@ const Nav = () => {
     const handleClosePopup = () => {
         setSignin(false);
     }
+    const toggleSupport=()=>{
+        setSupport(!support);
+    }
         
     
 
@@ -120,6 +125,7 @@ const Nav = () => {
                             width={30}
                             height={30}
                             alt="customer care"
+                            onClick={toggleSupport}
                         />
                     </li>
                     <li className={styles.navbarItem}>
@@ -133,6 +139,23 @@ const Nav = () => {
             )}
             {showDrawer && (<Drawer toggleMenu={toggleMenu} handleSignInPopup={handleSignInPopup} handleSignOut={handleSignOut} />) }
             {signin && (<Sign handleClosePopup={handleClosePopup} />)}
+            {support?<div id={styles.supportdiv} className={styles.support}>
+                <div className={styles.flexDiv}><h1 className={styles.support}>Support</h1><button onClick={toggleSupport}>X</button></div>
+                <div className={styles.flexDiv}><section><p className={styles.support}>Please reach out to us with your concerns on any of these platforms</p>
+                <br />
+                <p className={styles.support}>Email :</p>
+                <p className={styles.support}>support@aasthy.com</p>
+                <br />
+                <p className={styles.support}>Call :</p>
+                <p className={styles.support}>+918045688004</p>
+                <br />
+                <p className={styles.support}>Whatsapp :</p>
+                <p className={styles.support}>+918045688004</p></section>
+                <Image id={styles.supportIm} width={200} heigth={200}src={Support} alt='image'></Image>
+                </div>
+                
+            </div>:
+            <></>}
 
 
         </div>
