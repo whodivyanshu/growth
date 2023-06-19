@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
 import SigninState from '@/context/signin/SigninState'
 import Nav from '@/components/navbar/Nav'
-
+import UiState from '@/context/ui/UiState'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +19,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <UiState>
+
         <SigninState>
 
         <Nav/>
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         </SigninState>
+        </UiState>
         </body>
     </html>
   )

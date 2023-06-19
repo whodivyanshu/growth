@@ -3,12 +3,18 @@ import {getAuth, GoogleAuthProvider, signInWithPhoneNumber} from 'firebase/auth'
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCci93oq6lG8DeHOo0fCoTiJ-MZyYyGkDI",
-  authDomain: "growthinvestment-ec70e.firebaseapp.com",
-  projectId: "growthinvestment-ec70e",
-  storageBucket: "growthinvestment-ec70e.appspot.com",
-  messagingSenderId: "291454685935",
-  appId: "1:291454685935:web:3cd3df6db5bd75abcfc11a"
+  apiKey: "AIzaSyC_rCDcFmtznd6YxInoDdVoHA3cvG_mNgk",
+
+  authDomain: "growthinvestment-dac9e.firebaseapp.com",
+
+  projectId: "growthinvestment-dac9e",
+
+  storageBucket: "growthinvestment-dac9e.appspot.com",
+
+  messagingSenderId: "853920348937",
+
+  appId: "1:853920348937:web:79a2de2ef588a8455931d8"
+
 
 };
 // Initialize Firebase
