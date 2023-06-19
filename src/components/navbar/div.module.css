@@ -35,6 +35,7 @@
 
 @media (max-width: 1200px) {
   .signin {
+    background-color: #4e0668;
     width: 50%;
     height: 50%;
     position: absolute;
