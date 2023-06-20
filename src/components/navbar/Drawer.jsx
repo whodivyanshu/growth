@@ -25,7 +25,7 @@ const Drawer = ({ toggleMenu, handleSignInPopup, handleSignOut, toggleSupport, t
   return (
     <div className={styles.drawer}>
                      <div className={styles.close} onClick={toggleMenu}>
-                         <Image style={{cursor: "pointer"}} src="https:img.icons8.com/ios/90/000000/multiply.png" width={30} height={30} alt="close" />
+                     <Image width="24" height="24" src="https://img.icons8.com/material-outlined/24/delete-sign.png" alt="delete-sign"/>
                      </div>
                      <ul className={styles.drawerItems}>
                          <Link href="/">
@@ -44,7 +44,7 @@ const Drawer = ({ toggleMenu, handleSignInPopup, handleSignOut, toggleSupport, t
                         <button className={styles.navbtn1} onClick={toggleShowReferral}>Refer and Earn</button>
                          </li>
                          <li className={styles.drawerItem} onClick={toggleSupport}>
-                             <Image src="https:img.icons8.com/ios/90/4E0668/headset--v1.png" width={30} height={30} alt='customer care' />
+                         <Image width="29" height="29" src="https://img.icons8.com/material-rounded/24/FFFFFF/headset.png" alt="headset"/>
                          </li>
                          <li className={styles.drawerItem}>
                              {login ? (<button className={styles.drawerbtn} onClick={handleSignOut} >Sign Out</button>) : (

@@ -1,7 +1,7 @@
 .container {
     padding: 40px;
     background-color: rgb(242, 242, 242);
-    height: 700px;
+    height: 600px;
   }
   
   .heading {
@@ -42,6 +42,9 @@
     .heading {
       font-size: 24px;
       margin-bottom: 15px;
+    }
+    .desc{
+      font-size: 15px;
     }
   
 

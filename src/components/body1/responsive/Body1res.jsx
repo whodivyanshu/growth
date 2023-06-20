@@ -7,8 +7,6 @@ const Body1res = () => {
       <>
         <div className={styles.nav} >
 
-        <div className={styles.fix} >
-      </div>
 
         <div className={styles.body1}>
 
