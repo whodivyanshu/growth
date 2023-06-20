@@ -16,6 +16,9 @@
 
     font-size: 25px;
 }
+.fix{
+    height: 68px;
+}
 .body1left h1{
     font-size: 22px;
     font-weight: 600;

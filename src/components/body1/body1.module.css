@@ -7,6 +7,9 @@
     flex-direction: row;
     /* display: none; */
 }
+.fix{
+    height: 71px;
+}
 .body1left{
     width: 50%;
     display: flex;

@@ -4,7 +4,12 @@ import styles from "./body1res.module.css";
 
 const Body1res = () => {
   return (
-    <>
+      <>
+        <div className={styles.nav} >
+
+        <div className={styles.fix} >
+      </div>
+
         <div className={styles.body1}>
 
 
@@ -27,6 +32,7 @@ const Body1res = () => {
                 <Image src="https://aasthy.com/static/media/aasthy-app-props-desktop.c5e1c3c6.png" alt='mobile logo' width={100} height={200}  />
             </div>
 
+        </div>
         </div>
         </>
   )

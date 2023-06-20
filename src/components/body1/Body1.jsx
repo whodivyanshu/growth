@@ -16,6 +16,9 @@ const Body1 = () => {
   }
 
   return (
+    <div className={styles.nav} >
+      <div className={styles.fix} ></div>
+
     <div className={styles.body1}>
       <div className={styles.body1left}>
         <h1>{body1[0].heading}</h1>
@@ -31,6 +34,7 @@ const Body1 = () => {
         <Image src="https://aasthy.com/static/media/aasthy-app-props-desktop.c5e1c3c6.png" alt='mobile logo' width={100} height={200} />
       </div>
     </div>
+          </div>
   );
 };
 

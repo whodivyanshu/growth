@@ -90,6 +90,7 @@ const Nav = () => {
     
 
     return (
+
         <div className={styles.navbar}>
             <div className={styles.navbar_logo}>
                 <Link href="/">
@@ -103,7 +104,7 @@ const Nav = () => {
                         height="20"
                         src="https://img.icons8.com/ios-filled/50/4E0668/menu--v1.png"
                         alt="menu--v1"
-                    />
+                        />
                 </div>
             ) : (
                 <ul className={styles.navbarItems}>
@@ -127,10 +128,10 @@ const Nav = () => {
                         <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/4E0668/help.png" onClick={toggleSupport} alt="help"/>
                     </li>                    <li className={styles.navbarItem}>
                     {login ? ( 
-                            <button className={styles.navbtn} onClick={handleSignOut} >logout</button> 
+                        <button className={styles.navbtn} onClick={handleSignOut} >logout</button> 
                         ) : (
                             <button className={styles.navbtn} onClick={handleSignInPopup} >Sign In</button>
-                           ) }
+                            ) }
                     </li>
                 </ul>
             )}
