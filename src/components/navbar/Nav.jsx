@@ -162,7 +162,7 @@ const Nav = () => {
             <></>}
             {showReferral && (
                 <div id={styles.referralDiv}>
-                    <h2>Start Referring Now!<span><b>X</b></span></h2> 
+                    <h2>Start Referring Now!<span><b onClick={toggleShowReferral} >X</b></span></h2> 
                     <h4>Invite your friends and earn upto 2% of their investment.</h4>
                     <p>You can earn 1% of your immediate referral and 0.5% , 0.25% and so on for every further referral of your referral</p>
                     <br />

@@ -36,3 +36,6 @@ li{
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
 }
+b{
+  cursor: pointer;
+}
