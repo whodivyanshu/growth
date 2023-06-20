@@ -38,7 +38,7 @@
     background-color: #4e0668;
     width: 50%;
     height: 50%;
-    position: absolute;
+    position: fixed;
     top: 20%;
     left: 25%;
     flex-direction: column;
@@ -52,7 +52,7 @@
   .signin {
     width: 80%;
     height: 70%;
-    position: absolute;
+    position: fixed;
     background-color: #4e0668;
     top: 20%;
     left: 10%;
