@@ -1,7 +1,7 @@
 .signin {
   width: 30%;
   height: 48%;
-  position: absolute;
+  position: fixed;
   top: 20%;
   left: 35%;
   border-radius: 10px;

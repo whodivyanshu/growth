@@ -125,7 +125,7 @@ const Nav = () => {
                         <button className={styles.navbtn1} onClick={toggleShowReferral}>Refer and Earn</button>
                     </li>
                     <li className={styles.navbarItem}>
-                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/4E0668/help.png" onClick={toggleSupport} alt="help"/>
+                        <Image width="30" height="30" src="https://img.icons8.com/ios-filled/50/4E0668/help.png" onClick={toggleSupport} alt="help"/>
                     </li>                    <li className={styles.navbarItem}>
                     {login ? ( 
                         <button className={styles.navbtn} onClick={handleSignOut} >logout</button> 
@@ -171,7 +171,7 @@ const Nav = () => {
 
 
 
-        </div>
+            </div>
     );
 };
 

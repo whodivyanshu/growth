@@ -17,7 +17,7 @@ const Body1 = () => {
 
   return (
     <div className={styles.nav} >
-      <div className={styles.fix} ></div>
+      {/* <div className={styles.fix} ></div> */}
 
     <div className={styles.body1}>
       <div className={styles.body1left}>

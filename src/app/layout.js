@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         <SigninState>
 
         <Nav/>
+        <div className='spaceee' ></div>
         {/* <Navbar  /> */}
         {children}
         <Footer />
