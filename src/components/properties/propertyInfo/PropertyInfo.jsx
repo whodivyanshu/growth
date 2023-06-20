@@ -1,10 +1,39 @@
-import React from 'react'
+"use client"
+import React, { useContext, useState, useEffect } from 'react';
 import styles from "./propertyinfo.module.css";
+import { getDoc, doc } from 'firebase/firestore';
+import { database } from "@/app/firebase";
 import propimage from "public/1.jpg"
-import Image from 'next/image';
+import propertyContext from '@/context/propertyContext';
 import Logo from "public/logo.png"
+import Image from 'next/image';
 
 const PropertyInfo = () => {
+  const [propertyData, setPropertyData] = useState(null);
+  const idd = useContext(propertyContext);
+  const propertyID = idd.id;
+  const collectionName = "properties";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const docRef = doc(database, collectionName, propertyID);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setPropertyData(docSnap.data());
+        } else {
+          console.log('Document does not exist!');
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, [propertyID, collectionName]);
+  console.log(propertyData);
+
+
   const handleback = ()=>{
     window.history.back();
   }

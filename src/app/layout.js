@@ -5,6 +5,7 @@ import Footer from '@/components/footer/Footer'
 import SigninState from '@/context/signin/SigninState'
 import Nav from '@/components/navbar/Nav'
 import UiState from '@/context/ui/UiState'
+import PropertyState from '@/context/PropertyState'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,9 +20,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <PropertyState>
+
         <UiState>
 
         <SigninState>
+
 
         <Nav/>
         <div className='spaceee' ></div>
@@ -30,6 +34,7 @@ export default function RootLayout({ children }) {
         <Footer />
         </SigninState>
         </UiState>
+        </PropertyState>
         </body>
     </html>
   )

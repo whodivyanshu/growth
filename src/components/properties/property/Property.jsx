@@ -1,11 +1,18 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import styles from "./property.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
+import propertyContext from '@/context/propertyContext';
+
 
 const Property = (props) => {
+  const page = useContext(propertyContext);
+  const handleClick = () => {
+    page.id = props.id;
+  }
+  // console.log(page.id);
   return (
-    <Link href="/property">
+    <Link href="/property" onClick={handleClick}>
       <div className={styles.contain}>
 
    <div className={styles.container}>
