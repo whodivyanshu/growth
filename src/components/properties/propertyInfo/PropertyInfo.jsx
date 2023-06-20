@@ -10,6 +10,7 @@ import Image from 'next/image';
 
 const PropertyInfo = () => {
   const [propertyData, setPropertyData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const idd = useContext(propertyContext);
   const propertyID = idd.id;
   const collectionName = "properties";
@@ -24,32 +25,44 @@ const PropertyInfo = () => {
         } else {
           console.log('Document does not exist!');
         }
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
+        setLoading(false);
       }
     };
+    idd.image = propertyData?.image;
+    idd.image2 = propertyData?.image2;
+    
 
     fetchData();
   }, [propertyID, collectionName]);
-  console.log(propertyData);
 
-
-  const handleback = ()=>{
+  const handleBack = () => {
     window.history.back();
+  };
+
+  if (loading) {
+    return <div>Loading...</div>; // Show a loading indicator while data is being fetched
   }
   return (
     <div className={styles.property}>
-        <span className={styles.back} > <   Image width="24" onClick={handleback}  height="24" src="https://img.icons8.com/material-two-tone/24/left.png" alt="left"/></span>
+        <span className={styles.back} > <   Image width="24" onClick={handleBack}  height="24" src="https://img.icons8.com/material-two-tone/24/left.png" alt="left"/></span>
         <div className={styles.location}>
             
         <h2>Ramamurthy Nagar, Bangalore- Hebron Avenue</h2>
         <p> <Image width="18" height="18" src="https://img.icons8.com/metro/26/000000/marker.png" alt="marker"/> Ramamurthy Nagar, Bangalore</p>
         </div>
         <div className={styles.images}>
-            <Image src={propimage} alt='image' width={400} height={250} />
-            <Image src={propimage} alt='image' width={350} height={250} />
-            <Image src={propimage} alt='image' width={350} height={250} />
-        </div>
+  {propertyData && (
+    <>
+      <Image src={propertyData.image} alt='image' width={400} height={250} />
+      <Image src={propertyData.image2} alt='image' width={350} height={250} />
+      <Image src={propertyData.image3} alt='image' width={350} height={250} />
+    </>
+  )}
+</div>
+
         <div className={styles.post}>
                 <p>Posted at Mar 11, 2023 • <Image src={Logo} alt='lgo' width={100} height={36}  /> <span>Guaranteed Builder Buyback</span> </p>
         </div>

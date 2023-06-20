@@ -6,6 +6,9 @@ const PropertyState = (props)=>{
 
     const state = {
         "id": "1",
+        "image": "hey",
+        "image2": "hey",
+        "image3": "hey",
     }
 
     return(
