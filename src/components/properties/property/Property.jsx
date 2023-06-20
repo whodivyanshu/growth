@@ -9,15 +9,15 @@ const Property = (props) => {
       <div className={styles.contain}>
 
    <div className={styles.container}>
-    <div className={styles.image}>
-      <p>Herbon Avenue <br /> Bangalore</p>
+    <div style={{ backgroundImage: `url(${props.image})` }} className={styles.image}>
+      <p>{props.location} <br /> {props.area}</p>
 
     </div>
     <p className={styles.unit}>1 Unit</p>
     <hr className={styles.hr} />
     <div className={styles.main}>
-      <h3>Min. investment: ₹5,000</h3>
-      <p>Funded: ₹1,17,05,000 (100%)</p>
+      <h3>Min. investment: ₹{props.investment}</h3>
+      <p>Funded: ₹{props.funded} (100%)</p>
       <hr className={styles.hrr} />
       <h5>GENERATING RETURNS</h5>
       <hr className={styles.hr} />
