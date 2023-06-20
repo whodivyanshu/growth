@@ -18,6 +18,7 @@ const Nav = () => {
     const [showDrawer, setShowDrawer] = useState(false);
     const [signin, setSignin] = useState(false)
     const [support, setSupport]=useState(false);
+    const [showReferral,setReferral]=useState(false);
 
     const toggleMenu = () => {
         setShowDrawer(!showDrawer);
@@ -82,6 +83,9 @@ const Nav = () => {
     const toggleSupport=()=>{
         setSupport(!support);
     }
+    const toggleShowReferral=()=>{
+        setReferral(!showReferral);
+    }
         
     
 
@@ -117,7 +121,7 @@ const Nav = () => {
                         <li className={styles.navbarItem}>About Us</li>
                     </Link>
                     <li className={styles.navbarItem}>
-                        <button className={styles.navbtn1}>Refer and Earn</button>
+                        <button className={styles.navbtn1} onClick={toggleShowReferral}>Refer and Earn</button>
                     </li>
                     <li className={styles.navbarItem}>
                         <Image
@@ -137,7 +141,7 @@ const Nav = () => {
                     </li>
                 </ul>
             )}
-            {showDrawer && (<Drawer toggleMenu={toggleMenu} handleSignInPopup={handleSignInPopup} handleSignOut={handleSignOut} />) }
+            {showDrawer && (<Drawer toggleMenu={toggleMenu} handleSignInPopup={handleSignInPopup} toggleSupport={toggleSupport} handleSignOut={handleSignOut} toggleShowReferral={toggleShowReferral}/>) }
             {signin && (<Sign handleClosePopup={handleClosePopup} />)}
             {support?<div id={styles.supportdiv} className={styles.support}>
                 <div className={styles.flexDiv}><h1 className={styles.support}>Support</h1><button onClick={toggleSupport}>X</button></div>
@@ -156,6 +160,21 @@ const Nav = () => {
                 
             </div>:
             <></>}
+            {showReferral && (
+                <div id={styles.referralDiv}>
+                    <h2>Start Referring Now!<span><b>X</b></span></h2> 
+                    <h4>Invite your friends and earn upto 2% of their investment.</h4>
+                    <p>You can earn 1% of your immediate referral and 0.5% , 0.25% and so on for every further referral of your referral</p>
+                    <br />
+                    <span>Your Referral Code</span>
+                    <br />
+                    <div>
+                        <h3>ADIT674</h3>
+                        <button>copy</button>
+                    </div>
+                </div>
+            )}
+
 
 
         </div>

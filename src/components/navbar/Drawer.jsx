@@ -4,7 +4,7 @@ import React, {useState, useContext, useEffect} from 'react'
 import styles from './navbar.module.css'
 import signinContext from '@/context/signin/signinContext'
 
-const Drawer = ({ toggleMenu, handleSignInPopup, handleSignOut }) => {
+const Drawer = ({ toggleMenu, handleSignInPopup, handleSignOut, toggleSupport, toggleShowReferral }) => {
     const log = useContext(signinContext);
     const [login, setLogin] = useState(false);
     useEffect(() => {
@@ -41,9 +41,9 @@ const Drawer = ({ toggleMenu, handleSignInPopup, handleSignOut }) => {
                          <li className={styles.drawerItem}>About Us</li>
                                          </Link>
                          <li className={styles.drawerItem}>
-                             <button className={styles.drawerbtn1}>Refer and Earn</button>
+                        <button className={styles.navbtn1} onClick={toggleShowReferral}>Refer and Earn</button>
                          </li>
-                         <li className={styles.drawerItem}>
+                         <li className={styles.drawerItem} onClick={toggleSupport}>
                              <Image src="https:img.icons8.com/ios/90/4E0668/headset--v1.png" width={30} height={30} alt='customer care' />
                          </li>
                          <li className={styles.drawerItem}>
