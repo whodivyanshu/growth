@@ -16,7 +16,10 @@ const Body2 = () => {
 Accessible</h1>
 <p >12-18% returns <br />
 starting from only ₹5,000</p>
-<button>Explore Opportunities</button>
+<Link href="/properties">
+
+<button >Explore Opportunities</button>
+</Link>
         </div>
         <div className={styles.right} >
             <Image src="https://aasthy.com/static/media/hero-location-image.72e4d501.svg"  width={600} alt='photo' height={600} />

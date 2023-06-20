@@ -27,7 +27,7 @@ const Properties = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // console.log(properties);
+  console.log(properties);
 
   return (
     <div className={styles.container}>

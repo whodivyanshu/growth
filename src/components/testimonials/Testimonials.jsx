@@ -1,5 +1,8 @@
-import React from "react";
+"use client"
+import React,{useContext} from "react";
 import styles from './testimonials.module.css';
+import UiContext from '@/context/ui/uiContext';
+
 
 
 const names=["Ashish Kumar","Radha Ramanujan","Ojaswin","Dr. Radhika Sarda","Rajkumar Singh"];
@@ -8,12 +11,19 @@ const job=["Business Intelligence Analyst","CFO at Aliaxis SA- Ashirvad Pipes","
 const photo=["https://aasthy.com/lp/AK.jpg","https://aasthy.com/lp/RR.jpg","https://aasthy.com/lp/OM.jpg","https://aasthy.com/lp/DRS.jpg","https://aasthy.com/lp/RJS.jpg"];
 
 
+
 const ReviewTile =(props)=>{
+  
+  const asthians = useContext(UiContext);
+  console.log(asthians);
+  
+  
+  
   const {index} =props;
   const investImgStyle = {
-      backgroundImage: `url("${photo[index]}")`
+    backgroundImage: `url("${photo[index]}")`
     };
-  return(
+    return(
       <div className={styles.reviewTile}>
               <div className={styles.photo} style={investImgStyle}>
               </div>
@@ -34,7 +44,7 @@ const Testimonials=()=> {
         <div className={styles.reviewContainer}>
           {[0,1,2,3,4].map(i=>(
             <ReviewTile key={i} index={i}/>
-          ))}
+            ))}
 
     </div>
     </div>
