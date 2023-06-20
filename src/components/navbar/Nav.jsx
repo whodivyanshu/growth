@@ -124,13 +124,7 @@ const Nav = () => {
                         <button className={styles.navbtn1} onClick={toggleShowReferral}>Refer and Earn</button>
                     </li>
                     <li className={styles.navbarItem}>
-                        <Image
-                            src="https:img.icons8.com/ios/90/000000/headset--v1.png"
-                            width={30}
-                            height={30}
-                            alt="customer care"
-                            onClick={toggleSupport}
-                        />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/help.png" onClick={toggleSupport} alt="help"/>
                     </li>
                     <li className={styles.navbarItem}>
                     {login ? ( 
