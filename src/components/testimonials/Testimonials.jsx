@@ -4,46 +4,39 @@ import styles from './testimonials.module.css';
 import UiContext from '@/context/ui/uiContext';
 
 
-
-const names=["Ashish Kumar","Radha Ramanujan","Ojaswin","Dr. Radhika Sarda","Rajkumar Singh"];
-const review=['Thanks to "aasthy" real estate investment is now pocket friendly with a small ticket price of Rs. 10,000.','In an age of high-risk investments, "aasthy" is a great tool to make low risk investments thanks to their data driven approach.',"With aasthy I was able to explore an avenue of investments which historically has been associated with lower risk and higher return.","The journey of investing in a property was so simple. Aasthy wins, by providing easy access to information, and assured returns.","One stop shop, investing in real estate truly redefined by aasthy. You can now invest in real estate at just a click of a button."];
-const job=["Business Intelligence Analyst","CFO at Aliaxis SA- Ashirvad Pipes","Developer at IBM","MD/DM Infectious Diseases at AIIMS Delhi","India Head at Doxel"];
-const photo=["https://aasthy.com/lp/AK.jpg","https://aasthy.com/lp/RR.jpg","https://aasthy.com/lp/OM.jpg","https://aasthy.com/lp/DRS.jpg","https://aasthy.com/lp/RJS.jpg"];
-
-
-
 const ReviewTile =(props)=>{
-  
-  const asthians = useContext(UiContext);
-  console.log(asthians);
-  
-  
-  
-  const {index} =props;
+  const {aasthian} =props;
   const investImgStyle = {
-    backgroundImage: `url("${photo[index]}")`
+    backgroundImage: `url("${aasthian.image}")`
     };
     return(
       <div className={styles.reviewTile}>
               <div className={styles.photo} style={investImgStyle}>
               </div>
               <div className={styles.testimonies}>
-                  <p className={styles.review}>{review[index]}</p>
+                  <p className={styles.review}>{aasthian.discription}</p>
                   <br/>
-                  <h4 className={styles.name}>{names[index]}</h4>
-                  <p className={styles.hob}>{job[index]}</p>
+                  <h4 className={styles.name}>{aasthian.name}</h4>
+                  <p className={styles.hob}>{aasthian.role}</p>
               </div>
       </div>
   )
 }
 
 const Testimonials=()=> {
+  const asthian = useContext(UiContext);
+  console.log(asthian);
+  const noOfAasthians= asthian.length;
+  const aasthianIndex=[];
+  for(var i=1;i<noOfAasthians;i++){
+    aasthianIndex.push(i);
+  }
   return(
     <div className={styles.cover}>
         <h1 className={styles.heading}>Happy Aasthians</h1>
         <div className={styles.reviewContainer}>
-          {[0,1,2,3,4].map(i=>(
-            <ReviewTile key={i} index={i}/>
+          {aasthianIndex.map(i=>(
+            <ReviewTile key={i} aasthian={asthian[i]}/>
             ))}
 
     </div>
