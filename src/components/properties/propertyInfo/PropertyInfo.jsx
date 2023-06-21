@@ -5,7 +5,10 @@ import { getDoc, doc } from 'firebase/firestore';
 import { database } from "@/app/firebase";
 import propimage from "public/1.jpg"
 import propertyContext from '@/context/propertyContext';
-import Logo from "public/logo.png"
+import Logo from "public/logo.png";
+import property1 from "public/4.jpeg";
+import property2 from "public/5.jpeg";
+import property3 from "public/6.jpeg";
 import Image from 'next/image';
 
 const PropertyInfo = () => {
@@ -54,9 +57,9 @@ const PropertyInfo = () => {
         <div className={styles.images}>
   {propertyData && (
     <>
-      <Image src={propertyData.image} alt='image' width={400} height={250} />
-      <Image src={propertyData.image2} alt='image' width={350} height={250} />
-      <Image src={propertyData.image3} alt='image' width={350} height={250} />
+      <Image src={property1} alt='image' width={400} height={250} />
+      <Image src={property2} alt='image' width={350} height={250} />
+      <Image src={property3} alt='image' width={350} height={250} />
     </>
   )}
 </div>
