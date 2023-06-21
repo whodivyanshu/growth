@@ -7,6 +7,7 @@ import propertyContext from '@/context/propertyContext';
 import Logo from "public/logo.png";
 import Cookies from 'js-cookie';
 import Image from 'next/image';
+import Loading from '@/app/loading';
 
 const PropertyInfo = () => {
   const [propertyData, setPropertyData] = useState(null);
@@ -41,7 +42,7 @@ const PropertyInfo = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>; // Show a loading indicator while data is being fetched
+    return <Loading/>; // Show a loading indicator while data is being fetched
   }
 
   return (
