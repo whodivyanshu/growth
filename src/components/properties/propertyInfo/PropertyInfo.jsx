@@ -55,13 +55,12 @@ const PropertyInfo = () => {
         <p> <Image width="18" height="18" src="https://img.icons8.com/metro/26/000000/marker.png" alt="marker"/> Ramamurthy Nagar, Bangalore</p>
         </div>
         <div className={styles.images}>
-  {propertyData && (
-    <>
+
+
       <Image src={property1} alt='image' width={400} height={250} />
       <Image src={property2} alt='image' width={350} height={250} />
       <Image src={property3} alt='image' width={350} height={250} />
-    </>
-  )}
+
 </div>
 
         <div className={styles.post}>
