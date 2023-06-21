@@ -31,10 +31,7 @@ const PropertyInfo = () => {
         setLoading(false);
       }
     };
-    idd.image = propertyData?.image;
-    idd.image2 = propertyData?.image2;
-    idd.image3 = propertyData?.image3;
-    
+
 
     fetchData();
   }, []);
