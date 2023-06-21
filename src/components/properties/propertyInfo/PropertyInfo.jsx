@@ -3,20 +3,17 @@ import React, { useContext, useState, useEffect } from 'react';
 import styles from "./propertyinfo.module.css";
 import { getDoc, doc } from 'firebase/firestore';
 import { database } from "@/app/firebase";
-import propimage from "public/1.jpg"
 import propertyContext from '@/context/propertyContext';
 import Logo from "public/logo.png";
-import property1 from "public/4.jpeg";
-import property2 from "public/5.jpeg";
-import property3 from "public/6.jpeg";
+import Cookies from 'js-cookie';
 import Image from 'next/image';
 
 const PropertyInfo = () => {
   const [propertyData, setPropertyData] = useState(null);
   const [loading, setLoading] = useState(true);
   const idd = useContext(propertyContext);
-  const propertyID = idd.id;
-  const collectionName = "properties";
+  const propertyID = Cookies.get('propertyID');
+    const collectionName = "properties";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,15 +26,15 @@ const PropertyInfo = () => {
           console.log('Document does not exist!');
         }
         setLoading(false);
+        localStorage.setItem('propertyID', propertyID); 
       } catch (error) {
         console.error('Error fetching data:', error);
         setLoading(false);
       }
     };
 
-
     fetchData();
-  }, []);
+  }, [propertyID]); 
 
   const handleBack = () => {
     window.history.back();
@@ -46,23 +43,57 @@ const PropertyInfo = () => {
   if (loading) {
     return <div>Loading...</div>; // Show a loading indicator while data is being fetched
   }
+
   return (
     <div className={styles.property}>
-        <span className={styles.back} > <   Image width="24" onClick={handleBack}  height="24" src="https://img.icons8.com/material-two-tone/24/left.png" alt="left"/></span>
-        <div className={styles.location}>
-            
+      <span className={styles.back}>
+        <Image
+          width="24"
+          onClick={handleBack}
+          height="24"
+          src="https://img.icons8.com/material-two-tone/24/left.png"
+          alt="left"
+        />
+      </span>
+      <div className={styles.location}>
         <h2>Ramamurthy Nagar, Bangalore- Hebron Avenue</h2>
-        <p> <Image width="18" height="18" src="https://img.icons8.com/metro/26/000000/marker.png" alt="marker"/> Ramamurthy Nagar, Bangalore</p>
-        </div>
-        <div className={styles.images}>
-
-
-      <Image src={property1} alt='image' width={400} height={250} />
-      <Image src={property2} alt='image' width={350} height={250} />
-      <Image src={property3} alt='image' width={350} height={250} />
-
-</div>
-
+        <p>
+          <Image
+            width="18"
+            height="18"
+            src="https://img.icons8.com/metro/26/000000/marker.png"
+            alt="marker"
+          />
+          Ramamurthy Nagar, Bangalore
+        </p>
+      </div>
+      <div className={styles.images}>
+        {propertyData && (
+          <>
+            <Image
+              key={propertyData.image}
+              src={propertyData.image}
+              alt='image'
+              width={400}
+              height={250}
+            />
+            <Image
+              key={propertyData.image2}
+              src={propertyData.image2}
+              alt='image'
+              width={350}
+              height={250}
+            />
+            <Image
+              key={propertyData.image3}
+              src={propertyData.image3}
+              alt='image'
+              width={350}
+              height={250}
+            />
+          </>
+        )}
+      </div>
         <div className={styles.post}>
                 <p>Posted at Mar 11, 2023 • <Image src={Logo} alt='lgo' width={100} height={36}  /> <span>Guaranteed Builder Buyback</span> </p>
         </div>

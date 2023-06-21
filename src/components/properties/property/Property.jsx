@@ -3,12 +3,14 @@ import styles from "./property.module.css";
 import Image from 'next/image';
 import Link from 'next/link';
 import propertyContext from '@/context/propertyContext';
+import Cookies from 'js-cookie';
 
 
 const Property = (props) => {
   const page = useContext(propertyContext);
   const handleClick = () => {
-    page.id = props.id;
+    localStorage.setItem('propertyID', props.id);
+    Cookies.set('propertyID', props.id);
   }
   // console.log(page.id);
   return (
