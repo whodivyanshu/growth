@@ -66,11 +66,11 @@ transform: translateY(-5px);
     padding: 5px;
     border: none;
     border-radius: 10px;
-    background-color: rgb(148, 100, 194);
+    background-color: var(--primary);
 }
 .main h5{
     padding: 10px 0px;
-    color: rgb(148, 100, 194);
+    color: var(--primary);
 }
 .iteminvest{
     padding: 10px;
