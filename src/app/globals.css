@@ -3,6 +3,10 @@
   padding: 0;
   margin: 0;
 }
+:root{
+  --primary:#0c81c7;
+  --secondary:#f3b708;
+}
 
 html,
 body {
