@@ -1,0 +1,30 @@
+.graph{
+    padding: 50px 50px;
+    /* height: 500px; */
+}
+.graphContainer{
+    padding-top: 60px;
+}
+.graph p{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.graph img{
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .graph {
+      padding: 20px;
+    }
+  
+    .graph h1{
+        font-size: 24px;
+    }
+    .graph p{
+        font-size: 15px;
+    }
+  
+
+  }
+  

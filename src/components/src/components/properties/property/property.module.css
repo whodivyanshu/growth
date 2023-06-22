@@ -1,0 +1,80 @@
+.container{
+    width: 280px;
+    /* margin: 10px; */
+    height: 350px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 9px;
+    box-shadow: 0 2px 4px -.885714px rgba(50,50,71,.21);
+    transition: transform .3s ease-in-out,box-shadow .3s ease-in-out,-webkit-transform .3s ease-in-out;
+}
+.contain:hover{
+    box-shadow: 0 2px 3px -.885714px rgba(50,50,71,.11),0 4px 6px -.885714px rgba(50,50,71,.21);
+-webkit-transform: translateY(-5px);
+transform: translateY(-5px);
+
+}
+.contain{
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.image{
+    background-image: url("https://production-public-asset-images.s3.ap-south-1.amazonaws.com/asset-24d78e0b-b156-4dc9-b905-e25e18917a77-2");
+    width: inherit;
+    height: 150px;
+    background-position: center;
+    border-radius: 9px 9px 0px 0px;
+    background-size: cover;
+    box-shadow: 10px 0px 19px 10px rgba(0, 0, 0, 0.658) inset;}
+.image p{
+    font-size: 13px;
+    line-height: 16px;
+    padding: 10px;
+    color: white;
+}
+.unit{
+    font-size: 13px;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: rgb(174, 174, 174);
+}
+.hr{
+    color: rgb(242, 237, 237);
+    margin: 5px 0px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    /* background-color: aquamarine; */
+
+    padding: 10px;
+}
+.main h3{
+    font-size: 13px;
+    color: rgb(54, 54, 54);
+    padding-bottom: 10px;
+}
+.main p{
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: rgb(138, 138, 138);
+}
+.hrr{
+    /* padding-top: 10px; */
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary);
+}
+.main h5{
+    padding: 10px 0px;
+    color: var(--primary);
+}
+.iteminvest{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}

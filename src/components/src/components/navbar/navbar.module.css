@@ -1,0 +1,322 @@
+.space{
+    height: 68px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: grey 0px 0px 10px;
+}
+.navbar button{
+    cursor: pointer;
+}
+.navbar li{
+    cursor: pointer;
+}
+
+
+@media (max-width: 882px) {
+    .navbar {
+        padding: 0px 20px;
+        /* background-color: #b293bd; */
+        height: 60px;
+    }
+
+    .navbarItems {
+        display: none;
+    }
+
+    .menuButton {
+        display: flex;
+        /* display: none; */
+        padding: 0px 10px;
+        align-items: center;
+        cursor: pointer;
+        /* background-color: aqua; */
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 0px 20px; /* Adjust the padding values as per your requirements */
+    }
+}
+.navbar_logo{
+    display: flex;
+    align-items: center;
+}
+.navbarItem{
+    margin: 10px;
+    color: rgb(61, 61, 61);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbarItems{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    align-items: center;
+    /* background-color: none; */
+}
+.navbarItem button{
+    /* border: none;s */
+    border-radius: 7px;
+}
+.navbtn{
+    padding: 10px 30px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+.navbtn1{
+    padding: 10px 10px;
+    border: 2px solid var(--primary);
+    background: none;
+}
+.drawer{
+    display: none;
+}
+@media (max-width: 800px) {
+    .close{
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px 20px;
+        /* background-color: #b293bd; */
+
+    }
+    .drawer{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        background-color: #d2c0d7;
+        height: 100%;
+        overflow-y: visible;
+        transition: transform 0.3s ease-in-out;
+    }
+    .drawerItems{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style-type: none;
+        text-align: center;
+        /* margin: 20px 10px; */
+
+    }
+    .drawerItem{
+        margin: 15px 10px;
+        color: white
+
+        
+    }
+    .drawerbtn{
+        padding: 10px 30px;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .drawerbtn1{
+        padding: 10px 10px;
+        background-color: white;
+
+        color: var(--primary);
+        
+        border: 2px solid var(--primary);
+        border-radius: 5px;
+        /* background: none; */
+    }
+}
+
+
+#supportdiv{
+    position: fixed;
+    top: 30%;
+    width: 40%;
+    left: 30%;
+    padding: 30px;
+    background-color: var(--primary);
+}
+
+.support{
+    color: white;
+    border-radius: 10px;
+}
+
+.flexDiv{
+    display: flex;
+}
+.flexDiv button{
+    margin-left: auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(61, 61, 61,0);
+}
+@media (max-width: 882px) {
+    .navbar {
+        padding: 0px 20px;
+        /* background-color: #b293bd; */
+        height: 60px;
+    }
+
+    .navbarItems {
+        display: none;
+    }
+
+    .menuButton {
+        display: flex;
+        /* display: none; */
+        padding: 0px 10px;
+        align-items: center;
+        cursor: pointer;
+        /* background-color: aqua; */
+    }
+    #supportdiv{
+        left: 10%;
+        color: black;
+        width: 80%;
+        }
+}
+@media (max-width:470px){
+    #supportIm{
+        display: none;
+    }
+}
+/* #referralDiv{
+    position: fixed;
+    top: 30%;
+    width: 30%;
+    left: 35%;
+    background: white;
+    padding: 20px;
+    box-shadow: black 0px 0px 200px;
+    font-family: sans-serif;
+}
+
+#referralDiv h2{
+    font-size: 22px;
+    color: var(--primary);
+    display: flex;
+}#referralDiv h3{
+    font-size: 22px;
+    color: var(--primary);
+}
+#referralDiv h2 span{
+    margin-left: auto;
+    color: black;
+    font-size: 22px;
+}
+#referralDiv h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+#referralDiv p{
+    font-size: 10px;
+    color: rgb(53, 53, 53);
+}
+#referralDiv span{
+    font-size: 10px;
+    color: grey;
+}
+#referralDiv div{
+    display: flex;
+}
+#referralDiv button{
+    margin-left: auto;
+    padding: 5px;
+    font-size: 15px;
+    color: var(--primary);
+    border: 2px var(--primary) solid;
+}#referralDiv button:hover{
+    margin-left: auto;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--primary);
+} */
+
+/* Default styles */
+#referralDiv {
+    position: fixed;
+    top: 30%;
+    width: 30%;
+    left: 35%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 200px black;
+    font-family: sans-serif;
+}
+
+#referralDiv h2 {
+    font-size: 22px;
+    color: var(--primary);
+    display: flex;
+}
+
+#referralDiv h3 {
+    font-size: 22px;
+    color: var(--primary);
+}
+
+#referralDiv h2 span {
+    margin-left: auto;
+    color: black;
+    font-size: 22px;
+}
+
+#referralDiv h4 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#referralDiv p {
+    font-size: 10px;
+    color: #353535;
+}
+
+#referralDiv span {
+    font-size: 10px;
+    color: grey;
+}
+
+#referralDiv div {
+    display: flex;
+}
+
+#referralDiv button {
+    margin-left: auto;
+    padding: 5px;
+    font-size: 15px;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+#referralDiv button:hover {
+    margin-left: auto;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--primary);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #referralDiv {
+        width: 80%;
+        left: 10%;
+    }
+}

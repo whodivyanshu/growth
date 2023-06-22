@@ -1,0 +1,56 @@
+.phone {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .head {
+    font-size: 30px;
+  }
+  
+  .phone div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .phone input {
+    padding: 20px;
+  }
+  
+  .verify {
+    margin: 20px 0px;
+  }
+  
+  .phone button {
+    margin: 20px 0px;
+    padding: 5px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 600px) {
+    .phone {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .head {
+      font-size: 24px;
+    }
+  
+    .phone input {
+      padding: 10px;
+    }
+  
+    .phone button {
+      margin: 10px 0px;
+      padding: 5px;
+    }
+  }
+
+  .phone button{
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+  }

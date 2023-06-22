@@ -1,0 +1,133 @@
+.body2{
+    height: 560px;
+    background-image: url("https://aasthy.com/static/media/hero-eclipse-desktop.6784702e.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 60px;
+    flex-direction: row;
+
+}
+.left h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+.left p{
+    font-size: 1.5rem;
+    margin-top: 30px;
+    font-weight: 800;
+    color: var(--primary);
+
+    margin-bottom: 20px;
+}
+.left button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.left button:hover{
+    border: 2px black solid;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1282px){
+    .left h1{
+        font-size: 2.5rem;
+    }
+    .right img{
+        width: 400px;
+    }
+    .left p{
+        font-size: 1.2rem;
+    }
+    .body2{
+        padding: 70px 40px;
+    }
+}
+
+@media (max-width: 900px){
+    .body2{
+        flex-direction: column;
+        
+        height: fit-content;
+    }
+    .left h1{
+        font-size: 1.9rem;
+    }
+    .right img{
+        width: 380px;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+#marketPoints {
+    display: flex;
+    margin: 5%;
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--primary);
+    box-shadow: grey 0px 0px 10px;
+  }
+  
+  #marketPoints div div {
+    width: 50%;
+  }
+  
+  .marketsubDiv {
+    display: flex;
+    width: 50%;
+  }
+  
+  #marketPoints h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  #marketPoints p {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  @media (max-width: 800px) {
+    #marketPoints {
+      display: block;
+      margin: 5%;
+      padding: 10px;
+    }
+    
+    #marketPoints div div {
+      width: 100%;
+    }
+    
+    .marketsubDiv {
+      width: 100%;
+    }
+    
+    #marketPoints h1 {
+      font-size: 21px;
+    }
+    
+    #marketPoints p {
+      font-size: 21px;
+    }
+  }
+  
