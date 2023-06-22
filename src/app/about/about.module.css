@@ -31,12 +31,16 @@
   }
   
   #exploreAss {
-    background-color: #4e0668;
-    color: white;
+    background-color: var(--secondary);
+    color: black;
     font-size: 14px;
     padding: 10px 15px;
     border-radius: 5px;
     letter-spacing: 0.2ch;
+  }
+
+  #exploreAss:hover{
+    border: 2px black solid;
   }
   
   .image {
@@ -59,4 +63,6 @@
       padding: 70px 8% 100px; /* Restore original horizontal padding */
     }
   }
-  
+  #highlight{
+    color: var(--primary);
+  }
